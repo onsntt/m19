@@ -76,14 +76,14 @@ int main()
 
         std::ifstream buffer;
         std::string str = "";
-       // std::cout << "STRING " << str << "\n";
+       
         std::string ext = ".txt";
         std::string qFileName = "www/q";
         std::string aFileName = "www/a";
         qFileName = qFileName + re(activeQ) + ext;
        
-        std::cout << qFileName << "\n";
-        //qFileName =  (char)activeQ + ext ;
+       // std::cout << qFileName << "\n";
+        
         buffer.open(qFileName);
         assert(buffer.is_open());
         while (!buffer.eof())
@@ -106,6 +106,7 @@ int main()
             std::getline(buffer, str);
             
         }
+        buffer.close();
         if (str == answer)
           {
             z++;
